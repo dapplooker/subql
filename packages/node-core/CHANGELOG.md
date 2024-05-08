@@ -5,6 +5,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [10.2.0] - 2024-05-08
+### Changed
+- Bump with @subql/utils, update polkadot dependencies to v11
+
+### Fixed
+- Fix `reindex` command failed due to `projectUpgradeService` not been initialized
+- Fix project upgrade to an earlier height, deployments in metadata not been updated, and app restart will lead to reindex.
+
+## [10.1.2] - 2024-05-03
+### Fixed
+- Fix `filterBlockTimestamp` when filter could be undefined
+
+## [10.1.1] - 2024-05-02
+### Fixed
+- Add back missing dependencies `pg`, also rollback `Uint8Array` change for sandbox as it could break other sdk.
+
+## [10.1.0] - 2024-05-02
+### Fixed
+- Fixed issue Buffer within sandbox could not concat Buffer and Uint8Array, also injected `atob`
+
+### Added
+- Expose option to add workerData to workers (#2372)
+
+### Changed
+- Simplify logger function (#2374)
+
+## [10.0.0] - 2024-04-24
 ### Added
 - Various pieces of code from node and generalised them (#2357)
 
@@ -656,7 +684,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Move blockchain agnostic code from `node` to `node-core` package. (#1222)
 
-[Unreleased]: https://github.com/subquery/subql/compare/node-core/9.0.0...HEAD
+[Unreleased]: https://github.com/subquery/subql/compare/node-core/10.2.0...HEAD
+[10.2.0]: https://github.com/subquery/subql/compare/node-core/10.1.2...node-core/10.2.0
+[10.1.2]: https://github.com/subquery/subql/compare/node-core/10.1.1...node-core/10.1.2
+[10.1.1]: https://github.com/subquery/subql/compare/node-core/10.1.0...node-core/10.1.1
+[10.1.0]: https://github.com/subquery/subql/compare/node-core/10.0.0...node-core/10.1.0
+[10.0.0]: https://github.com/subquery/subql/compare/node-core/9.0.0...node-core/10.0.0
 [9.0.0]: https://github.com/subquery/subql/compare/node-core/8.0.1...node-core/9.0.0
 [8.0.1]: https://github.com/subquery/subql/compare/node-core/8.0.0...node-core/8.0.1
 [8.0.0]: https://github.com/subquery/subql/compare/node-core/7.5.1...node-core/8.0.0

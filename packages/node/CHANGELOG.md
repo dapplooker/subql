@@ -5,6 +5,33 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [4.4.1] - 2024-05-08
+### Fixed
+- Temp disable console warn for `Unable to map [u8; 32] to a lookup index` ,until [this issue](https://github.com/polkadot-js/api/issues/5871) fixed
+
+## [4.4.0] - 2024-05-08
+### Changed
+- Update polkadot dependencies to v11
+- Bump with node-core, fix various issue with project upgrade
+
+## [4.3.2] - 2024-05-03
+### Fixed
+- Bump dependency with node-core, fix block timestamp filter could be undefined
+
+## [4.3.1] - 2024-05-02
+### Fixed
+- Bump dependency with node-core, fix failed to start issue due to missing `pg`
+
+## [4.3.0] - 2024-05-02
+### Removed
+- Unused deps (#2375)
+
+## [4.2.1] - 2024-04-29
+### Fixed
+- Startup error with DS processors (`this.isCustomDs is not a function`) (#2369)
+
+## [4.2.0] - 2024-04-24
 ### Changed
 - Use code that has been moved to node core, tidy up dependencies (#2357)
 
@@ -1162,7 +1189,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - bump @polkadot/api to 3.1.1
 
-[Unreleased]: https://github.com/subquery/subql/compare/node/4.1.0...HEAD
+[Unreleased]: https://github.com/subquery/subql/compare/node/4.4.1...HEAD
+[4.4.1]: https://github.com/subquery/subql/compare/node/4.4.0...node/4.4.1
+[4.4.0]: https://github.com/subquery/subql/compare/node/4.3.2...node/4.4.0
+[4.3.2]: https://github.com/subquery/subql/compare/node/4.3.1...node/4.3.2
+[4.3.1]: https://github.com/subquery/subql/compare/node/4.3.0...node/4.3.1
+[4.3.0]: https://github.com/subquery/subql/compare/node/4.2.1...node/4.3.0
+[4.2.1]: https://github.com/subquery/subql/compare/node/4.2.0...node/4.2.1
+[4.2.0]: https://github.com/subquery/subql/compare/node/4.1.0...node/4.2.0
 [4.1.0]: https://github.com/subquery/subql/compare/node/4.0.1...node/4.1.0
 [4.0.1]: https://github.com/subquery/subql/compare/node/4.0.0...node/4.0.1
 [4.0.0]: https://github.com/subquery/subql/compare/node/3.10.0...node/4.0.0
